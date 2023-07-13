@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "write the file name: " file_name
+echo "#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */" > $file_name
+vi $file_name

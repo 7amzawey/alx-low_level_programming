@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Generates a random number and prints 
- *
+ * main - Generates a random number and prints
  * Return: Always 0 (Success)
- */
+ **/
 int main(void)
 {
 int n, last_digit;

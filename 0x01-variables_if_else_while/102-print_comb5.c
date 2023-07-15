@@ -11,11 +11,13 @@ int k;
 int o;
 for (i = 0; i < 10; i++)
 {
-for (j = i ; j < 10; j++)
+for (j = 0 ; j < 10; j++)
 {
-for (k = 0; k < 10; k++)
+for (k = i; k < 10; k++)
 {
-for (o = k + 1; o < 10; o++)
+for (o = (k == i) ? j + 1 : 0; o <= 9; o++)
+
+
 {
 putchar(i + '0');
 putchar(j + '0');

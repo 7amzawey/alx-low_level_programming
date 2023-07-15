@@ -1,8 +1,6 @@
 #!/bin/bash
 read -p "Enter the c file name : " file_name
 echo "#include <stdio.h>
-#include <stdlib.h>
-#include <time.h> 
 /**
  * main - Entry point
  *

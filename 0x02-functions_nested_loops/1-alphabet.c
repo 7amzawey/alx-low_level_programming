@@ -1,5 +1,16 @@
-#/bin/bash
-read -o "enter the commit name " commit_name
-git add .
-git commit -m "$commit_name"
-git push
+#include "main.h"
+/**
+ * main - check the code
+ *
+ *
+ * Return: Always 0.
+ */
+void main(void)
+{int i;
+	for (i = a ; i <= z; i++)
+	{
+		_putchar(i);
+	}
+	_putchar("\n");
+return (0);
+}

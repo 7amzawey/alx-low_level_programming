@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "enter the file name : " file_name
+echo "#include "main.h"
+/**
+ * main - check the code
+ *
+ *
+ * Return: Always 0.
+ */" > $file_name
+vi $file_name

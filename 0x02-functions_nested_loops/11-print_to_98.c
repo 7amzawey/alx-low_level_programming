@@ -47,7 +47,7 @@ void print_to_98(int n)
 	{
 		for (c = n; c >= 98; c--)
 		{
-			_putchar(c != 98);
+			print_number(c);
 			if (c != 98)
 			{
 			_putchar(',');

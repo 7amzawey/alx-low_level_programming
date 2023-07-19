@@ -1,0 +1,13 @@
+#!/bin/bash
+read -p "Enter the c file name : " file_name
+echo "#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}" > $file_name
+vi $file_name

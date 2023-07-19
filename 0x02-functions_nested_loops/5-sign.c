@@ -1,7 +1,8 @@
 #include "main.h"
-/*
- * _print_sign - prints the sign of number
- *
+/**
+ * print_sign - prints the sign of number
+ * @n: the bloody variable
+ * Return: the sign of the number
  */
 int print_sign(int n)
 {

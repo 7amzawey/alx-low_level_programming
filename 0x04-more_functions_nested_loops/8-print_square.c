@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_square - print square a number of times
  * @size: the size of squares
@@ -11,7 +10,7 @@ int j;
 	{
 		for (n = 0; n < size; n++)
 		{
-			for (j = 0 ;j < size; j++)
+			for (j = 0 ; j < size; j++)
 			{
 			_putchar('#');
 			}

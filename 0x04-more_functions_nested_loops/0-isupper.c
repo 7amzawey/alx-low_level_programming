@@ -1,11 +1,10 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _isupper - checks fo uppercase character
- * @n: the checked number 
+ * @c: the checked number
  * Return: 1 if its uppercase otherwise 0
  */
-int _issupper(int c)
+int _isupper(int c)
 {
 int n;
 	for (n = 'A'; n <= 'Z'; n++)
@@ -14,7 +13,6 @@ int n;
 		{
 		return (1);
 		}
-				
 	}
 	return (0);
 }

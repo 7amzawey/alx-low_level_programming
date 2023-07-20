@@ -17,6 +17,8 @@ int j;
 			_putchar('\n');
 		}
 	}
-
+	else
+	{
+	_putchar('\n');
+	}
 }
-

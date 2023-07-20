@@ -1,0 +1,4 @@
+#!/bin/bash
+read -p "Enter the name of the main file: " main_file
+read -p "Enter the name of the working file : " working_filename
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 $(main_file $working_filename).c -o $working_filename

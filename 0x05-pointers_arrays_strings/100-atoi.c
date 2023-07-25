@@ -11,7 +11,7 @@ int sign = 1;
 int i = 0;
 
 /* Find the first digit or sign */
-while (s[i] != '\0' && (s[i] < '0' || s[i] > '9') && s[i] != '+' && s[i] != '-')
+while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 {
 i++;
 }

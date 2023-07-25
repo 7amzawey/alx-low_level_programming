@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * void puts2 - writeAFaunctionThatPrintsEveryOtherCharacte
+ * puts2 - writeAFaunctionThatPrintsEveryOtherCharacte
  * @str: this is the string pointer
  * Return: the wanted numbers that is a stupid Q
  */

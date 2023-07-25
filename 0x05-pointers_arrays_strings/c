@@ -1,5 +1,5 @@
 #!/bin/bash
 read -p "Enter the commit name" commit_name
 git add .
-git commit -m "$commit_name"
+git commit -m "$commit_name : "
 git push

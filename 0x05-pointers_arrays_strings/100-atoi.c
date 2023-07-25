@@ -13,16 +13,16 @@ int i = 0;
 /* Find the first digit or sign */
 while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 {
-i++;
-}
+
 /* Check if the first character is a sign */
 if (s[i] == '-')
 {
-sign = -1;
-i++;
+sign *= -1;
 }
-else if (s[i] == '+')
+else if (s[i] != '+')
 {
+break;
+}
 i++;
 }
 /* Convert the subsequent characters to an integer */

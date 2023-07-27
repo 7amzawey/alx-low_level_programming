@@ -10,7 +10,7 @@ char *leet(char *s)
 
 	while (s[i] != '\0')
 	{
-		if ( s[i] == 'a' || s[i] == 'A')
+		if (s[i] == 'a' || s[i] == 'A')
 		{
 			s[i] = '4';
 		}

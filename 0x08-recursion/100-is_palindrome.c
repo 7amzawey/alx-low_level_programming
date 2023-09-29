@@ -8,6 +8,7 @@
 int _strlen(char *s)
 {
 	int length = 0;
+
 	if (*s)
 	{
 		length++;
@@ -21,7 +22,7 @@ int _strlen(char *s)
  * @s: is the string
  * @st: is the start
  * @end: is the end
- * return: 0 if not plain 1 if it is
+ * Return: 0 if not plain 1 if it is
  */
 int helper(char *s, int st, int end)
 {
@@ -37,9 +38,8 @@ int helper(char *s, int st, int end)
 		}
 		else
 		{
-			return helper(s, st + 1,end - 1);
+			return (helper(s, st + 1, end - 1));
 		}
-	
 }
 
 
@@ -53,10 +53,10 @@ int helper(char *s, int st, int end)
 int is_palindrome(char *s)
 {
 	int len = _strlen(s) - 1;
+
 	if (len < 0)
 	{
 		return (1);
 	}
 	return (helper(s, 0, len));
-	
 }

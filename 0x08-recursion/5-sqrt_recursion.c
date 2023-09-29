@@ -3,7 +3,7 @@
  * helper - is here to help idiot
  * @n: is the bloody number at the function
  * @i: this a helper as well
- * Return: the square root
+ * Return: alittle bit of help
  */
 int helper(int n, int i)
 {
@@ -17,11 +17,13 @@ int helper(int n, int i)
 	}
 	return (helper(n, i + 1));
 }
+
 /**
  * _sqrt_recursion - returns the square route
  * @n: the number
- * Return: the square route
+ * Return: nothing
  */
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)

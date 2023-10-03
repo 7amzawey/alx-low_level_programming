@@ -10,6 +10,12 @@
  */
 int main(int argc, char *argv[])
 {
+	int n;
+	int sum;
+	int su;
+	int s;
+	int l;
+	int f;
 
 
 	if (argc != 2)
@@ -17,12 +23,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	int n = atoi(argv[1]);
-	int sum = (((((n % 5) % 10) % 5) % 2));
-	int su = (((n % 25) % 10) % 5) / 2;
-	int s = ((n % 25) % 10) / 5;
-	int l = (n % 25) / 10;
-	int f = (n / 25);
+	n = atoi(argv[1]);
 
 	if (n < 0)
 	{
@@ -31,6 +32,11 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
+	sum = (((((n % 5) % 10) % 5) % 2));
+	su = (((n % 25) % 10) % 5) / 2;
+	s = ((n % 25) % 10) / 5;
+	l = (n % 25) / 10;
+	f = (n / 25);
 printf("%d\n", (f + l + s + su + sum));
 
 	}

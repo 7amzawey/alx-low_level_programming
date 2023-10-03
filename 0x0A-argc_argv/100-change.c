@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
 /**
  * main - calculate the minimum number of conins need
  * to make change for a given amount of money

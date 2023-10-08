@@ -10,35 +10,22 @@
  * if null passed treat it as an empty string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{	int size = 0;
+{	int size = 0, i;
+	unsigned int j, len2 = 0;
 	char *ptr;
-	int i;
-	unsigned int j;
-	unsigned int len2 = 0;
 
 	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+	s1 = "";
 	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-
+	s2 = "";
 	while (s1[size])
-	{
-		size++;
-	}
+	size++;
 	while (s2[size] && len2 < n)
-	{
-		len2++;
-	}
+	len2++;
 	ptr = malloc(sizeof(char) * (size + n + 1));
 
 	if (ptr == NULL)
-	{
-		return (NULL);
-	}
+	return (NULL);
 	for (i = 0; i < size; i++)
 	{
 	ptr[i] = s1[i];

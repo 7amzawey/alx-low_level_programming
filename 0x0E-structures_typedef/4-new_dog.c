@@ -29,12 +29,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int s = 0;
 	char *temp = name;
 	char *tem = owner;
+	dog_t *newDog;
 
 	while (*temp++)
 	{
 		size++;
 	}
-	dog_t *newDog = malloc(sizeof(dog_t));
+	newDog = malloc(sizeof(dog_t));
 
 	if (!newDog)
 	return (NULL);

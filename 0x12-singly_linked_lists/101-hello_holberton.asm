@@ -1,11 +1,11 @@
 section		.data
 msg db 'Hello, Holberton', 0x0A, 0
-soction		.text
+section		.text
 	extern printf
 	global main
 main:
 	mov		rdi, msg
-	mov		eax, eax
+	xor		eax, eax
 	call		printf
 	xor edi, edi
 	mov eax, 0x60

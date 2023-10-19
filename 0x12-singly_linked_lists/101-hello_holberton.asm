@@ -1,9 +1,12 @@
-section		.text
-	extren	printf
-	global	main
-main:
-	mov		edi, msg
-	mov		eax, 0
-	call	printf
 section		.data
-	msg db 'Hello, Holberton', 0xa, 0
+msg db 'Hello, Holberton', 0x0A, 0
+soction		.text
+	extern printf
+	global main
+main:
+	mov		rdi, msg
+	mov		eax, eax
+	call		printf
+	xor edi, edi
+	mov eax, 0x60
+	syscall

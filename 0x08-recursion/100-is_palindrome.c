@@ -7,16 +7,11 @@
  */
 int _strlen(char *s)
 {
-	int length = 0;
-
 	if (*s)
-	{
-		length++;
-		s++;
-	}
-	return (length);
+		return (1 + _strlen(s + 1));
+	else
+		return (0);
 }
-
 /**
  * helper - just for help
  * @s: is the string
@@ -56,7 +51,7 @@ int is_palindrome(char *s)
 
 	if (len < 0)
 	{
-		return (1);
+		return (0);
 	}
 	return (helper(s, 0, len));
 }

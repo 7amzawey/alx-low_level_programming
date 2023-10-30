@@ -47,7 +47,7 @@ dprintf(STDERR_FILENO, ERR_NOCLOSE, from_fd), exit(100);
 }
 if (close(to_fd) == -1)
 {
-dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd);
+dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd), exit(100);
 }
 return (0);
 }

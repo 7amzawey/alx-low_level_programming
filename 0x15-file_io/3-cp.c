@@ -49,5 +49,5 @@ if (close(to_fd) == -1)
 {
 dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd);
 }
-return (EXIT_SUCCESS);
+return (0);
 }

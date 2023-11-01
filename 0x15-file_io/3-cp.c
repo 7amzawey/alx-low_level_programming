@@ -53,10 +53,18 @@ dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd), exit(100);
 }
 return (0);
 }
+/**
+ * _exit1 - exits the programe when it cant read
+ * @filename: is the filename
+ */
 void _exit1(const char *filename)
 {
 dprintf(STDERR_FILENO, ERR_NOREAD, filename), exit(98);
 }
+/**
+ * _exit2 - exit the programe when it cant write
+ * @filename: is the file name
+ */
 void _exit2(const char *filename)
 {
 dprintf(STDERR_FILENO, ERR_NOWRITE, filename), exit(99);

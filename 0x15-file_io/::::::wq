@@ -4,8 +4,6 @@
 #define ERR_NOWRITE "Error: cant write to %s\n"
 #define ERR_NOCLOSE "Error: can't close fd %d\n"
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IWGRP | S_IROTH)
-void _exit1(const char *filename);
-void _exit2(const char *filename);
 /**
  * main - copies the content of a file to another
  * @argc: the number of arguments
@@ -25,23 +23,23 @@ dprintf(STDERR_FILENO, USAGE), exit(97);
 from_fd = open(argv[1], O_RDONLY);
 if (from_fd == -1)
 {
-_exit1(argv[1]);
+dprintf(STDERR_FILENO, ERR_NOREAD, argv[1]), exit(98);
 }
 to_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 if (to_fd == -1)
 {
-_exit2(argv[2]);
+dprintf(STDERR_FILENO, ERR_NOWRITE, argv[2]), exit(99);
 }
 while ((b = read(from_fd, buf, BUFSIZE)) > 0)
 {
 if (write(to_fd, buf, b) != b)
 {
-_exit2(argv[2]);
+dprintf(STDERR_FILENO, ERR_NOWRITE, argv[2]), exit(99);
 }
 }
 if (b == -1)
 {
-_exit1(argv[1]);
+dprintf(STDERR_FILENO, ERR_NOREAD, argv[1]), exit(98);
 }
 if (close(from_fd) == -1)
 {
@@ -52,12 +50,4 @@ if (close(to_fd) == -1)
 dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd), exit(100);
 }
 return (0);
-}
-void _exit1(const char *filename)
-{
-dprintf(STDERR_FILENO, ERR_NOREAD, filename), exit(98);
-}
-void _exit2(const char *filename)
-{
-dprintf(STDERR_FILENO, ERR_NOWRITE, filename), exit(99);
 }

@@ -1,9 +1,9 @@
 #include "main.h"
 #define USAGE "Usage: cp file_from file_to\n"
 #define ERR_NOREAD "Error: can't read from file %s\n"
-#define ERR_NOWRITE "Error: cant write to %s\n"
+#define ERR_NOWRITE "Error: can't write to %s\n"
 #define ERR_NOCLOSE "Error: can't close fd %d\n"
-#define PERMISSIONS (S_IRUSR | S_IWUSR | S_IWGRP | S_IROTH)
+#define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP |  S_IROTH)
 void _exit1(const char *filename);
 void _exit2(const char *filename);
 /**

@@ -4,6 +4,7 @@
  * @ht: is the table.
  * @key: is the key and it can not be empty.
  * @value: is the value associated with the key && it must be duplicated.
+ * Return: 0 if failed and 1 if successed
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -14,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new_node = malloc(sizeof(hash_node_t));
 
-	if(!new_node)
+	if (!new_node)
 	{
 		return (0);
 	}
@@ -32,7 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		free(new_node->key);
 		free(new_node);
-		return(0);
+		return (0);
 	}
 	x = key_index((const unsigned char *)key, ht->size);
 	new_node->next = ht->array[x];

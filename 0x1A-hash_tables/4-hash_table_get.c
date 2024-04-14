@@ -10,6 +10,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int i;
 	int result;
+	if (!ht || !key)
+		return (NULL);
 
 	for (i = 0; i < ht->size; i++)
 	{

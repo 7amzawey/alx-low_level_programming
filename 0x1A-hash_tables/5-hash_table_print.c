@@ -7,11 +7,12 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	int printed;
+	if(ht == NULL)
+		return;
 
 	printf("{");
 
-	if (ht)
-	{
+	
 		for (i = 0; i < ht->size; i++)
 		{
 			hash_node_t *current_node = ht->array[i];
@@ -26,6 +27,5 @@ void hash_table_print(const hash_table_t *ht)
 				current_node = current_node->next;
 			}
 		}
-	}
 	printf("}\n");
 }

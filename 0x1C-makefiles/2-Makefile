@@ -9,5 +9,5 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $@
 
-$(OBJ): $(SRC)
-	$(CC) -c $(OBJ) -o $(SRC)
+%.o: %.c
+	$(CC) -c $^ -o $@

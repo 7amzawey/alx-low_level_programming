@@ -5,7 +5,7 @@ NAME = school
 CFLAGS= -Wall -Werror -Wextra -pedantic
 
 ifeq ($(wildcard m.h),)
-	$(erro m.h header file is missing)
+	$(error m.h header file is missing)
 endif
 
 all: $(NAME)

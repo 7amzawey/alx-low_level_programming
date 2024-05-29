@@ -7,7 +7,7 @@ NAME = school
 all: $(OBJ)
 
 NAME: $(OBJ)
-	$(CC) $^ -o NAME
+	$(CC) $(OBJ) -o NAME
 
 $(OBJ): $(SRC)
-	$(CC) -c $^ -o $@
+	$(CC) -c $(OBJ) -o $(SRC)

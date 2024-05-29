@@ -13,11 +13,11 @@ all: $(NAME)
 $(NAME): $(OBJ) 
 	$(CC) $(OBJ) -o $@
 
-school.o: school.c
-	$(CC) -Wall -Werror -Wextra -pedantic -c $< -o $@
+%.o: %.c
+	$(CC) -Wall -Werror -Wextra -pedantic -c $^ -o $@
 
-main.o: main.c
-	$(CC) -Wall -Werror -Wextra -pedantic -c $< -o $@
+#main.o: main.c
+#	$(CC) -Wall -Werror -Wextra -pedantic -c $< -o $@
 clean:
 	-$(RM) *~ $(NAME)
 

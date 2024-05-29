@@ -1,0 +1,30 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+CFLAGS= -Wall -Werror -Wextra -pedantic
+
+ifeq ($(wildcard m.h),)
+	$(error m.h header file is missing)
+endif
+
+all: $(NAME)
+
+$(NAME): $(OBJ) 
+	$(CC) $(OBJ) -o $@
+
+%.o: %.c
+	$(CC) -Wall -Werror -Wextra -pedantic -c $^ -o $@
+
+#main.o: main.c
+#	$(CC) -Wall -Werror -Wextra -pedantic -c $< -o $@
+clean:
+	-$(RM) *~ $(NAME)
+
+oclean: 
+	-$(RM) $(OBJ)
+
+
+fclean: oclean clean
+
+re: oclean all
